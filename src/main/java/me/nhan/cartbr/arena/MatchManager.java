@@ -7,7 +7,10 @@ import org.bukkit.entity.Firework;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.FireworkMeta;
@@ -49,12 +52,24 @@ public class MatchManager implements Listener {
     }
 
     public void resetSingleArena() {
+        if (dragonTask != null) {
+            dragonTask.cleanup();
+            dragonTask = null;
+        }
+        plugin.getPhaseScheduler().stop();
+        plugin.getDeathmatchManager().reset();
+        plugin.getParachuteManager().cleanupAll();
+
+        for (UUID uuid : new HashSet<>(matchPlayers)) {
+            Player p = Bukkit.getPlayer(uuid);
+            if (p != null) resetPlayerToLobby(p);
+        }
+
         this.state = GameState.RESETTING;
         this.matchPlayers.clear();
         this.alivePlayers.clear();
         this.killCounts.clear();
 
-        plugin.getDeathmatchManager().reset();
         plugin.getLootManager().resetOpenedChests();
         plugin.getHologramManager().removeAllHolograms();
 
@@ -247,6 +262,22 @@ public class MatchManager implements Listener {
         }
     }
 
+    public boolean forceSkipPhase() {
+        if (state == GameState.DRAGON_DROP) {
+            if (dragonTask != null) {
+                dragonTask.cleanup();
+                dragonTask = null;
+            }
+            onDragonFlightFinished();
+            return true;
+        }
+        if (state == GameState.INGAME || state == GameState.DEATHMATCH) {
+            plugin.getPhaseScheduler().skipToNextPhase();
+            return true;
+        }
+        return false;
+    }
+
     public void eliminatePlayer(Player victim, Player killer, boolean byCart) {
         if (!alivePlayers.remove(victim.getUniqueId())) return;
 
@@ -315,10 +346,6 @@ public class MatchManager implements Listener {
             public void run() {
                 if (seconds >= 5) {
                     cancel();
-                    for (UUID uuid : new HashSet<>(matchPlayers)) {
-                        Player p = Bukkit.getPlayer(uuid);
-                        if (p != null) resetPlayerToLobby(p);
-                    }
                     resetSingleArena();
                     return;
                 }
@@ -371,12 +398,49 @@ public class MatchManager implements Listener {
     }
 
     @EventHandler
-    public void onDamageInNonCombatStates(EntityDamageEvent event) {
+    public void onDamageInMatch(EntityDamageEvent event) {
         if (!(event.getEntity() instanceof Player p)) return;
+        if (!matchPlayers.contains(p.getUniqueId())) return;
+
         if (state == GameState.WAITING || state == GameState.STARTING || state == GameState.ENDING) {
-            if (matchPlayers.contains(p.getUniqueId())) {
-                event.setCancelled(true);
+            event.setCancelled(true);
+            if (event.getCause() == EntityDamageEvent.DamageCause.VOID) {
+                World arenaWorld = plugin.getSlimeArenaManager().getCurrentArenaWorld();
+                if (arenaWorld != null) {
+                    p.teleport(plugin.getConfigManager().getWaitingCageLocation(arenaWorld));
+                }
             }
+            return;
+        }
+
+        if (event.getCause() == EntityDamageEvent.DamageCause.VOID && alivePlayers.contains(p.getUniqueId())) {
+            event.setDamage(1000.0);
+        }
+    }
+
+    @EventHandler
+    public void onWaitingHunger(FoodLevelChangeEvent event) {
+        if (!(event.getEntity() instanceof Player p)) return;
+        if ((state == GameState.WAITING || state == GameState.STARTING || state == GameState.ENDING)
+                && matchPlayers.contains(p.getUniqueId())) {
+            event.setFoodLevel(20);
+            event.setCancelled(true);
+        }
+    }
+
+    @EventHandler
+    public void onWaitingBreak(BlockBreakEvent event) {
+        if ((state == GameState.WAITING || state == GameState.STARTING || state == GameState.ENDING)
+                && matchPlayers.contains(event.getPlayer().getUniqueId())) {
+            event.setCancelled(true);
+        }
+    }
+
+    @EventHandler
+    public void onWaitingPlace(BlockPlaceEvent event) {
+        if ((state == GameState.WAITING || state == GameState.STARTING || state == GameState.ENDING)
+                && matchPlayers.contains(event.getPlayer().getUniqueId())) {
+            event.setCancelled(true);
         }
     }
 
