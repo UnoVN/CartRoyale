@@ -8,6 +8,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class ConfigManager {
 
@@ -32,6 +33,11 @@ public class ConfigManager {
 
     public int getMinPlayers() {
         return cfg().getInt("settings.min-players", 3);
+    }
+
+    public void setMinPlayers(int minPlayers) {
+        cfg().set("settings.min-players", minPlayers);
+        plugin.saveConfig();
     }
 
     public int getMaxPlayers() {
@@ -94,6 +100,16 @@ public class ConfigManager {
         );
     }
 
+    public void setLobbySpawn(Location loc) {
+        cfg().set("lobby-spawn.world", loc.getWorld().getName());
+        cfg().set("lobby-spawn.x", round(loc.getX()));
+        cfg().set("lobby-spawn.y", round(loc.getY()));
+        cfg().set("lobby-spawn.z", round(loc.getZ()));
+        cfg().set("lobby-spawn.yaw", round(loc.getYaw()));
+        cfg().set("lobby-spawn.pitch", round(loc.getPitch()));
+        plugin.saveConfig();
+    }
+
     public Location getWaitingCageLocation(World arenaWorld) {
         return new Location(
                 arenaWorld,
@@ -105,6 +121,15 @@ public class ConfigManager {
         );
     }
 
+    public void setWaitingCage(Location loc) {
+        cfg().set("arena.waiting-cage.x", round(loc.getX()));
+        cfg().set("arena.waiting-cage.y", round(loc.getY()));
+        cfg().set("arena.waiting-cage.z", round(loc.getZ()));
+        cfg().set("arena.waiting-cage.yaw", round(loc.getYaw()));
+        cfg().set("arena.waiting-cage.pitch", round(loc.getPitch()));
+        plugin.saveConfig();
+    }
+
     public Location getDragonP1(World arenaWorld) {
         return new Location(
                 arenaWorld,
@@ -114,6 +139,13 @@ public class ConfigManager {
         );
     }
 
+    public void setDragonP1(Location loc) {
+        cfg().set("arena.dragon-path.p1.x", round(loc.getX()));
+        cfg().set("arena.dragon-path.p1.y", round(loc.getY()));
+        cfg().set("arena.dragon-path.p1.z", round(loc.getZ()));
+        plugin.saveConfig();
+    }
+
     public Location getDragonP2(World arenaWorld) {
         return new Location(
                 arenaWorld,
@@ -121,6 +153,13 @@ public class ConfigManager {
                 cfg().getDouble("arena.dragon-path.p2.y", 145.0),
                 cfg().getDouble("arena.dragon-path.p2.z", 200.0)
         );
+    }
+
+    public void setDragonP2(Location loc) {
+        cfg().set("arena.dragon-path.p2.x", round(loc.getX()));
+        cfg().set("arena.dragon-path.p2.y", round(loc.getY()));
+        cfg().set("arena.dragon-path.p2.z", round(loc.getZ()));
+        plugin.saveConfig();
     }
 
     public double getDragonSpeed() {
@@ -133,6 +172,12 @@ public class ConfigManager {
 
     public double getIslandCenterZ() {
         return cfg().getDouble("arena.island-center.z", 0.5);
+    }
+
+    public void setIslandCenter(Location loc) {
+        cfg().set("arena.island-center.x", round(loc.getX()));
+        cfg().set("arena.island-center.z", round(loc.getZ()));
+        plugin.saveConfig();
     }
 
     public int getPhaseDuration(String key, int def) {
@@ -151,8 +196,19 @@ public class ConfigManager {
         return cfg().getDouble("arena.deathmatch.center-z", 2000.5);
     }
 
+    public void setDeathmatchCenter(Location loc) {
+        cfg().set("arena.deathmatch.center-x", round(loc.getX()));
+        cfg().set("arena.deathmatch.center-z", round(loc.getZ()));
+        plugin.saveConfig();
+    }
+
     public int getDeathmatchFloorY() {
         return cfg().getInt("arena.deathmatch.floor-y", 99);
+    }
+
+    public void setDeathmatchFloorY(int floorY) {
+        cfg().set("arena.deathmatch.floor-y", floorY);
+        plugin.saveConfig();
     }
 
     public int getDeathmatchFreezeSeconds() {
@@ -171,8 +227,36 @@ public class ConfigManager {
         return cfg().getLong("arena.phases.deathmatch.shrink-duration", 120L);
     }
 
+    public List<String> getRawDeathmatchSpawns() {
+        return cfg().getStringList("arena.deathmatch.spawns");
+    }
+
+    public int addDeathmatchSpawn(Location loc) {
+        List<String> spawns = new ArrayList<>(getRawDeathmatchSpawns());
+        String serialized = String.format(Locale.US, "%.1f,%.1f,%.1f,%.1f,%.1f",
+                loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
+        spawns.add(serialized);
+        cfg().set("arena.deathmatch.spawns", spawns);
+        plugin.saveConfig();
+        return spawns.size();
+    }
+
+    public boolean removeLastDeathmatchSpawn() {
+        List<String> spawns = new ArrayList<>(getRawDeathmatchSpawns());
+        if (spawns.isEmpty()) return false;
+        spawns.removeLast();
+        cfg().set("arena.deathmatch.spawns", spawns);
+        plugin.saveConfig();
+        return true;
+    }
+
+    public void clearDeathmatchSpawns() {
+        cfg().set("arena.deathmatch.spawns", new ArrayList<String>());
+        plugin.saveConfig();
+    }
+
     public List<Location> getDeathmatchSpawns(World arenaWorld) {
-        List<String> rawList = cfg().getStringList("arena.deathmatch.spawns");
+        List<String> rawList = getRawDeathmatchSpawns();
         List<Location> spawns = new ArrayList<>();
         for (String line : rawList) {
             String[] parts = line.split(",");
@@ -189,5 +273,9 @@ public class ConfigManager {
             spawns.add(new Location(arenaWorld, getDeathmatchCenterX(), getDeathmatchFloorY() + 1, getDeathmatchCenterZ()));
         }
         return spawns;
+    }
+
+    private double round(double val) {
+        return Math.round(val * 10.0) / 10.0;
     }
 }
