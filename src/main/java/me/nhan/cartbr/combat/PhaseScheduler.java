@@ -55,17 +55,7 @@ public class PhaseScheduler {
         updateBossBars();
 
         if (timeLeft <= 0) {
-            switch (currentPhase) {
-                case DROP -> advanceToPhase(PhaseType.PHASE_1);
-                case PHASE_1 -> advanceToPhase(PhaseType.PHASE_2);
-                case PHASE_2 -> advanceToPhase(PhaseType.PHASE_3);
-                case PHASE_3 -> advanceToPhase(PhaseType.DEATHMATCH);
-                case DEATHMATCH -> {
-                    Player winner = plugin.getMatchManager().getAlivePlayers().stream()
-                            .map(Bukkit::getPlayer).findFirst().orElse(null);
-                    plugin.getMatchManager().endMatch(winner);
-                }
-            }
+            skipToNextPhase();
             return;
         }
 
@@ -74,6 +64,20 @@ public class PhaseScheduler {
         }
 
         timeLeft--;
+    }
+
+    public void skipToNextPhase() {
+        switch (currentPhase) {
+            case DROP -> advanceToPhase(PhaseType.PHASE_1);
+            case PHASE_1 -> advanceToPhase(PhaseType.PHASE_2);
+            case PHASE_2 -> advanceToPhase(PhaseType.PHASE_3);
+            case PHASE_3 -> advanceToPhase(PhaseType.DEATHMATCH);
+            case DEATHMATCH -> {
+                Player winner = plugin.getMatchManager().getAlivePlayers().stream()
+                        .map(Bukkit::getPlayer).findFirst().orElse(null);
+                plugin.getMatchManager().endMatch(winner);
+            }
+        }
     }
 
     public void advanceToPhase(PhaseType nextPhase) {
@@ -196,5 +200,9 @@ public class PhaseScheduler {
         }
         bossBarEN = null;
         bossBarVI = null;
+    }
+
+    public PhaseType getCurrentPhase() {
+        return currentPhase;
     }
 }
