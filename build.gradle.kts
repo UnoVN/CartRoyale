@@ -29,29 +29,3 @@ java {
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
 }
-```
-
-### File 4: `src/main/resources/plugin.yml`
-```yaml
-name: CartBR
-version: '1.0.0'
-main: me.nhan.cartbr.CartBRPlugin
-api-version: '1.21'
-authors: [ Nhan ]
-description: Cart PvP Battle Royale with ASP Load/Unload, ModelEngine 4, and Nexo
-softdepend:
-  - ModelEngine
-  - Nexo
-  - SlimeWorldPlugin
-  - SlimeWorldManager
-
-commands:
-  cartbr:
-    description: Main command for CartBR
-    aliases: [ cbr ]
-    usage: /cartbr <join|leave|settings|forcestart|setup|reload>
-
-permissions:
-  cartbr.admin:
-    description: Admin permissions for CartBR setup and control
-    default: op
