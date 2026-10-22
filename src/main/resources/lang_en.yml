@@ -1,0 +1,107 @@
+prefix: "<gradient:#cba6f7:#f5c2e7><bold>ᴄᴀʀᴛʙʀ</bold></gradient> <#6c7086>»</#6c7086> "
+
+items:
+  join-item: "<gradient:#cba6f7:#89b4fa><bold>✦ ᴘʟᴀʏ ᴄᴀʀᴛ ʙʀ ✦</bold></gradient> <#a6adc8>(ʀɪɢʜᴛ-ᴄʟɪᴄᴋ)"
+  settings-item: "<gradient:#fab387:#f9e2af><bold>⚙ sᴇᴛᴛɪɴɢs & ʟᴀɴɢᴜᴀɢᴇ</bold></gradient> <#a6adc8>(ʀɪɢʜᴛ-ᴄʟɪᴄᴋ)"
+  leave-item: "<#f38ba8><bold>✘ ʟᴇᴀᴠᴇ ǫᴜᴇᴜᴇ</bold></#f38ba8> <#a6adc8>(ʀɪɢʜᴛ-ᴄʟɪᴄᴋ)"
+
+settings-gui:
+  title: "<#1e1e2e><bold>⚙ ᴄᴀʀᴛʙʀ sᴇᴛᴛɪɴɢs</bold>"
+  lang-button-name: "<gradient:#89dceb:#cba6f7><bold>🌐 ʟᴀɴɢᴜᴀɢᴇ sᴇʟᴇᴄᴛᴏʀ</bold></gradient>"
+  lang-button-lore:
+    - "<#6c7086>────────────────────────"
+    - "<#cdd6f4>sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴘʀᴇꜰᴇʀʀᴇᴅ ʟᴀɴɢᴜᴀɢᴇ:"
+    - ""
+    - " <#a6e3a1>▸ ᴇɴɢʟɪsʜ <#a6adc8>(ᴀᴄᴛɪᴠᴇ)"
+    - " <#6c7086>▪ ᴛɪᴇɴɢ ᴠɪᴇᴛ"
+    - ""
+    - "<#f9e2af>▶ ᴄʟɪᴄᴋ ᴛᴏ sᴡɪᴛᴄʜ ʟᴀɴɢᴜᴀɢᴇ!"
+    - "<#6c7086>────────────────────────"
+  language-changed: "<#a6e3a1>✔ <#cdd6f4>ʟᴀɴɢᴜᴀɢᴇ ʜᴀs ʙᴇᴇɴ sᴇᴛ ᴛᴏ <#f9e2af><bold>ᴇɴɢʟɪsʜ</bold><#cdd6f4>!"
+
+queue:
+  joined: "<#a6e3a1>✔ <#cdd6f4>ʏᴏᴜ ᴊᴏɪɴᴇᴅ ᴛʜᴇ ǫᴜᴇᴜᴇ! <#a6adc8>[<#89dceb><current><#a6adc8>/<#89dceb><max><#a6adc8>]"
+  left: "<#f38ba8>✘ <#cdd6f4>ʏᴏᴜ ʟᴇꜰᴛ ᴛʜᴇ ǫᴜᴇᴜᴇ."
+  waiting-actionbar: "<#cba6f7>✦ <#cdd6f4>ᴡᴀɪᴛɪɴɢ ꜰᴏʀ ᴘʟᴀʏᴇʀs... <#a6adc8>(<#f9e2af><current><#a6adc8>/<#f9e2af>3+<#a6adc8>)"
+  countdown-chat: "<#fab387>⏳ <#cdd6f4>ᴛʜᴇ ᴍᴀᴛᴄʜ sᴛᴀʀᴛs ɪɴ <#f38ba8><bold><seconds>s</bold></#f38ba8><#cdd6f4>!"
+  countdown-cancelled: "<#f38ba8>⚠ ɴᴏᴛ ᴇɴᴏᴜɢʜ ᴘʟᴀʏᴇʀs! ᴄᴏᴜɴᴛᴅᴏᴡɴ ᴄᴀɴᴄᴇʟʟᴇᴅ."
+  countdown-title:
+    title: "<gradient:#fab387:#f38ba8><bold><seconds></bold></gradient>"
+    subtitle: "<#a6adc8>ᴘʀᴇᴘᴀʀᴇ ꜰᴏʀ ᴅʀᴏᴘ..."
+
+drop-phase:
+  dragon-start-chat: |
+    <strikethrough><#585b70>                                                  </strikethrough>
+      <gradient:#cba6f7:#f5c2e7><bold>🐉 ᴛʜᴇ ᴅʀᴀɢᴏɴ ʜᴀs ᴅᴇᴘᴀʀᴛᴇᴅ!</bold></gradient>
+      <#a6adc8>• <#cdd6f4>ᴘʀᴇss <#f9e2af><bold>[sʜɪꜰᴛ]</bold></#f9e2af> <#cdd6f4>ᴛᴏ ᴅᴇᴘʟᴏʏ ʏᴏᴜʀ ᴘᴀʀᴀᴄʜᴜᴛᴇ.
+      <#a6adc8>• <#cdd6f4>ʟᴏᴏᴛ ᴄʜᴇsᴛs ꜰᴏʀ <#f38ba8>ᴛɴᴛ ᴄᴀʀᴛs<#cdd6f4>, <#89dceb>ʙʟᴀsᴛ ᴀʀᴍᴏʀ<#cdd6f4> & <#f9e2af>ᴛᴏᴛᴇᴍs<#cdd6f4>!
+    <strikethrough><#585b70>                                                  </strikethrough>
+  on-dragon-actionbar: "<#f5c2e7>🐉 <#cdd6f4>ᴘʀᴇss <#f9e2af><bold>sʜɪꜰᴛ</bold></#f9e2af> <#cdd6f4>ᴛᴏ ᴊᴜᴍᴘ <#6c7086>│ <#89dceb>ᴀʟᴛɪᴛᴜᴅᴇ: <#cdd6f4><y>m"
+  parachuting-actionbar: "<#a6e3a1>🪂 <#cdd6f4>ɢʟɪᴅɪɴɢ... <#6c7086>│ <#a6adc8>sᴛᴇᴇʀ ᴡɪᴛʜ ʏᴏᴜʀ ᴄᴀᴍᴇʀᴀ"
+  landed-chat: "<#a6e3a1>✔ <#cdd6f4>ᴛᴏᴜᴄʜᴅᴏᴡɴ! ᴘᴀʀᴀᴄʜᴜᴛᴇ ʀᴇᴍᴏᴠᴇᴅ & ꜰᴀʟʟ ɪᴍᴍᴜɴɪᴛʏ ꜰᴏʀ <#fab387>3s<#cdd6f4>."
+
+chest-holograms:
+  tier-1: |
+    <#a6e3a1><bold>📦 ᴛɪᴇʀ ɪ ᴄʜᴇsᴛ</bold>
+    <#a6adc8>▶ ᴄʟɪᴄᴋ ᴛᴏ ʟᴏᴏᴛ
+  tier-2: |
+    <#89dceb><bold>💎 ᴛɪᴇʀ ɪɪ ᴄʜᴇsᴛ</bold>
+    <#a6adc8>▶ ᴄʟɪᴄᴋ ᴛᴏ ʟᴏᴏᴛ
+  tier-3: |
+    <gradient:#f9e2af:#fab387><bold>👑 ᴛɪᴇʀ ɪɪɪ ᴄʜᴇsᴛ</bold></gradient>
+    <#f5c2e7>✦ ᴍʏᴛʜɪᴄ ɢᴇᴀʀ ✦
+  looted: |
+    <#6c7086><strikethrough>   </strikethrough> ✘ ʟᴏᴏᴛᴇᴅ ✘ <strikethrough>   </strikethrough>
+
+loot:
+  tier-1-actionbar: "<#a6e3a1>📦 <#cdd6f4>ᴏᴘᴇɴᴇᴅ <#a6e3a1><bold>ᴛɪᴇʀ ɪ ᴄʜᴇsᴛ</bold></#a6e3a1> <#a6adc8>(ᴄᴏᴍᴍᴏɴ)"
+  tier-2-actionbar: "<#89dceb>💎 <#cdd6f4>ᴏᴘᴇɴᴇᴅ <#89dceb><bold>ᴛɪᴇʀ ɪɪ ᴄʜᴇsᴛ</bold></#89dceb> <#a6adc8>(ʀᴀʀᴇ)"
+  tier-3-actionbar: "<gradient:#f9e2af:#fab387>👑 ᴏᴘᴇɴᴇᴅ ᴛɪᴇʀ ɪɪɪ ᴄʜᴇsᴛ (ᴍʏᴛʜɪᴄ)</gradient>"
+
+phases:
+  names:
+    DROP: "<#f5c2e7>🐉 ᴛʜᴇ ᴅʀᴏᴘ"
+    PHASE_1: "<#a6e3a1>🛡 sᴄᴀᴠᴇɴɢᴇ & ʟᴏᴏᴛ"
+    PHASE_2: "<#fab387>🔥 ʙᴏʀᴅᴇʀ sʜʀɪɴᴋ ɪ"
+    PHASE_3: "<#f38ba8>⚡ ʙᴏʀᴅᴇʀ sʜʀɪɴᴋ ɪɪ"
+    DEATHMATCH: "<gradient:#f38ba8:#cba6f7><bold>💀 ꜰɪɴᴀʟ ᴅᴇᴀᴛʜᴍᴀᴛᴄʜ</bold></gradient>"
+  bossbar-format: "<phase_name> <#6c7086>│ <#cdd6f4>ɴᴇxᴛ: <#f9e2af><bold><time></bold> <#6c7086>│ <#a6e3a1>ᴀʟɪᴠᴇ: <#cdd6f4><alive>"
+  phase-change-chat: "<#cba6f7>✦ <#cdd6f4>ᴘʜᴀsᴇ ᴀᴅᴠᴀɴᴄᴇᴅ: <phase_name> <#a6adc8>(<#f9e2af><duration>s<#a6adc8>)"
+  phase-change-title:
+    title: "<phase_name>"
+    subtitle: "<#cdd6f4>sᴜʀᴠɪᴠᴇ ᴀɴᴅ ᴇʟɪᴍɪɴᴀᴛᴇ ᴏᴘᴘᴏɴᴇɴᴛs!"
+
+combat:
+  kill-cart: "<#f38ba8>💥 <#f9e2af><killer> <#cdd6f4>ʙʟᴇᴡ ᴜᴘ <#f38ba8><victim> <#cdd6f4>ᴜsɪɴɢ <#f38ba8><bold>ᴛɴᴛ ᴍɪɴᴇᴄᴀʀᴛ</bold></#f38ba8><#cdd6f4>! <#a6adc8>[<#fab387><alive> ᴀʟɪᴠᴇ<#a6adc8>]"
+  kill-melee: "<#f38ba8>⚔ <#f9e2af><killer> <#cdd6f4>ᴇʟɪᴍɪɴᴀᴛᴇᴅ <#f38ba8><victim><#cdd6f4>! <#a6adc8>[<#fab387><alive> ᴀʟɪᴠᴇ<#a6adc8>]"
+  kill-refill-reward: "<#a6e3a1>⚡ <bold>ᴋɪʟʟ ʀᴇꜰɪʟʟ!</bold> <#cdd6f4>+5 ᴛɴᴛ ᴄᴀʀᴛs <#6c7086>│ <#cdd6f4>+16 ʀᴀɪʟs <#6c7086>│ <#f9e2af>+2 ɢᴏʟᴅᴇɴ ᴀᴘᴘʟᴇs"
+  cart-cooldown: "<#f38ba8>⚠ <#cdd6f4>ᴄᴀʀᴛ sᴘᴀᴍ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ! ᴡᴀɪᴛ <#fab387><time>s<#cdd6f4>."
+
+deathmatch:
+  teleport-warning: "<#f38ba8>⏳ <#cdd6f4>ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ᴛᴏ <#f9e2af><bold>ᴅᴇᴀᴛʜᴍᴀᴛᴄʜ ᴀʀᴇɴᴀ</bold> <#cdd6f4>ɪɴ <#f38ba8><seconds>s<#cdd6f4>!"
+  arena-intro-chat: |
+    <strikethrough><#585b70>                                                  </strikethrough>
+      <gradient:#f38ba8:#cba6f7><bold>💀 ꜰɪɴᴀʟ ᴅᴇᴀᴛʜᴍᴀᴛᴄʜ ᴀʀᴇɴᴀ 💀</bold></gradient>
+      <#a6adc8>• <#cdd6f4>ᴀʟʟ sᴜʀᴠɪᴠᴏʀs ʜᴀᴠᴇ ʙᴇᴇɴ ɢᴀᴛʜᴇʀᴇᴅ ꜰᴏʀ ᴛʜᴇ ꜰɪɴᴀʟ ᴅᴜᴇʟ!
+      <#a6adc8>• <#a6e3a1>+8 ᴛɴᴛ ᴄᴀʀᴛs <#cdd6f4>& <#a6e3a1>+32 ʀᴀɪʟs <#cdd6f4>ʜᴀᴠᴇ ʙᴇᴇɴ sᴜᴘᴘʟɪᴇᴅ.
+    <strikethrough><#585b70>                                                  </strikethrough>
+  freeze-countdown-title:
+    title: "<gradient:#f38ba8:#fab387><bold>⚔ <seconds> ⚔</bold></gradient>"
+    subtitle: "<#cdd6f4>ɢᴇᴛ ʀᴇᴀᴅʏ ꜰᴏʀ ᴛʜᴇ ꜰɪɴᴀʟ ᴄᴀʀᴛ ᴅᴜᴇʟ!"
+  fight-start-title:
+    title: "<gradient:#a6e3a1:#89dceb><bold>💥 ꜰɪɢʜᴛ! 💥</bold></gradient>"
+    subtitle: "<#f38ba8>ᴏɴʟʏ ᴏɴᴇ ᴄᴀɴ sᴜʀᴠɪᴠᴇ!"
+
+ending:
+  victory-title:
+    title: "<gradient:#f9e2af:#fab387><bold>👑 ᴠɪᴄᴛᴏʀʏ ʀᴏʏᴀʟᴇ 👑</bold></gradient>"
+    subtitle: "<#cba6f7>ᴄʜᴀᴍᴘɪᴏɴ: <#cdd6f4><winner>"
+  victory-broadcast: |
+    <strikethrough><#585b70>                                                  </strikethrough>
+      <gradient:#f9e2af:#fab387><bold>🏆 ᴍᴀᴛᴄʜ ᴏᴠᴇʀ - ᴄᴀʀᴛ ʙᴀᴛᴛʟᴇ ʀᴏʏᴀʟᴇ</bold></gradient>
+      
+      <#cba6f7>👑 ᴡɪɴɴᴇʀ: <#f9e2af><bold><winner></bold>
+      <#f38ba8>💥 ᴛᴏᴛᴀʟ ᴋɪʟʟs: <#cdd6f4><kills> ᴋɪʟʟs
+      
+      <#a6adc8>🔄 ʀᴇsᴇᴛᴛɪɴɢ ᴀʀᴇɴᴀ ɪɴ sʟɪᴍᴇ ᴍᴇᴍᴏʀʏ (5s)...
+    <strikethrough><#585b70>                                                  </strikethrough>
