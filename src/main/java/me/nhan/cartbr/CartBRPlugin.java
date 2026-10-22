@@ -9,6 +9,7 @@ import me.nhan.cartbr.combat.PhaseScheduler;
 import me.nhan.cartbr.config.ConfigManager;
 import me.nhan.cartbr.config.LootConfig;
 import me.nhan.cartbr.drop.ParachuteManager;
+import me.nhan.cartbr.gui.AdminGUI;
 import me.nhan.cartbr.gui.HotbarManager;
 import me.nhan.cartbr.gui.SettingsGUI;
 import me.nhan.cartbr.locale.LocaleManager;
@@ -56,6 +57,7 @@ public final class CartBRPlugin extends JavaPlugin {
         var pm = Bukkit.getPluginManager();
         pm.registerEvents(hotbarManager, this);
         pm.registerEvents(new SettingsGUI.Listener(this), this);
+        pm.registerEvents(new AdminGUI.Listener(this), this);
         pm.registerEvents(parachuteManager, this);
         pm.registerEvents(hologramManager, this);
         pm.registerEvents(lootManager, this);
@@ -74,7 +76,7 @@ public final class CartBRPlugin extends JavaPlugin {
             matchManager.initializeFirstArena();
         }, 20L);
 
-        getLogger().info("CartBR enabled successfully (Single-Map SWM Load/Unload Mode).");
+        getLogger().info("CartBR enabled successfully (Single-Map SWM Load/Unload Mode + Admin GUI).");
     }
 
     @Override
