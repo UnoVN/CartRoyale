@@ -30,18 +30,18 @@ public class SettingsGUI implements InventoryHolder {
     }
 
     public void render() {
-        ItemStack filler = new ItemStack(Material.GRAY_STAINED_GLASS_PANE);
-        ItemMeta fillerMeta = filler.getItemMeta();
-        if (fillerMeta != null) {
-            fillerMeta.displayName(Component.empty());
-            filler.setItemMeta(fillerMeta);
-        }
+        ItemStack darkGlass = createHiddenPane(Material.BLACK_STAINED_GLASS_PANE);
+        ItemStack accentGlass = createHiddenPane(Material.PURPLE_STAINED_GLASS_PANE);
 
         for (int i = 0; i < 27; i++) {
-            inventory.setItem(i, filler);
+            inventory.setItem(i, darkGlass);
+        }
+        int[] accents = {0, 8, 9, 17, 18, 26};
+        for (int slot : accents) {
+            inventory.setItem(slot, accentGlass);
         }
 
-        ItemStack langBtn = new ItemStack(Material.RECOVERY_COMPASS);
+        ItemStack langBtn = new ItemStack(Material.KNOWLEDGE_BOOK);
         ItemMeta meta = langBtn.getItemMeta();
         if (meta != null) {
             meta.displayName(plugin.getLocaleManager().getComponent(player, "settings-gui.lang-button-name"));
@@ -49,6 +49,17 @@ public class SettingsGUI implements InventoryHolder {
             langBtn.setItemMeta(meta);
         }
         inventory.setItem(13, langBtn);
+    }
+
+    private ItemStack createHiddenPane(Material mat) {
+        ItemStack pane = new ItemStack(mat);
+        ItemMeta meta = pane.getItemMeta();
+        if (meta != null) {
+            meta.displayName(Component.empty());
+            meta.setHideTooltip(true);
+            pane.setItemMeta(meta);
+        }
+        return pane;
     }
 
     public void open() {
