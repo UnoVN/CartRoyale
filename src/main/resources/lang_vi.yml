@@ -1,107 +1,111 @@
-prefix: "<gradient:#cba6f7:#f5c2e7><bold>ᴄᴀʀᴛʙʀ</bold></gradient> <#6c7086>»</#6c7086> "
+# ==========================================================
+# CART BR - TIẾNG VIỆT | CLEAN UI + 1.21 ITEM SPRITES
+# ==========================================================
+
+prefix: "<white><sprite:items:item/tnt_minecart></white> <gradient:#cba6f7:#f5c2e7><bold>ᴄᴀʀᴛʙʀ</bold></gradient> <#585b70>›</#585b70> "
 
 items:
-  join-item: "<gradient:#cba6f7:#89b4fa><bold>✦ ᴛɪᴍ ᴛʀᴀɴ ᴄᴀʀᴛ ʙʀ ✦</bold></gradient> <#a6adc8>(ᴄʟɪᴄᴋ ᴘʜᴀɪ)"
-  settings-item: "<gradient:#fab387:#f9e2af><bold>⚙ ᴄᴀɪ ᴅᴀᴛ & ɴɢᴏɴ ɴɢᴜ</bold></gradient> <#a6adc8>(ᴄʟɪᴄᴋ ᴘʜᴀɪ)"
-  leave-item: "<#f38ba8><bold>✘ ʀᴏɪ ʜᴀɴɢ ᴄʜᴏ</bold></#f38ba8> <#a6adc8>(ᴄʟɪᴄᴋ ᴘʜᴀɪ)"
+  join-item: "<white><sprite:items:item/tnt_minecart></white> <gradient:#cba6f7:#89b4fa><bold>ᴛìᴍ ᴛʀậɴ ᴄᴀʀᴛʙʀ</bold></gradient> <#585b70>• <#a6adc8>ᴄʟɪᴄᴋ ᴘʜảɪ"
+  settings-item: "<white><sprite:items:item/comparator></white> <gradient:#fab387:#f9e2af><bold>ᴄàɪ đặᴛ</bold></gradient> <#585b70>• <#a6adc8>ᴄʟɪᴄᴋ ᴘʜảɪ"
+  leave-item: "<white><sprite:items:item/red_bed></white> <#f38ba8><bold>ʀờɪ ʜàɴɢ ᴄʜờ</bold></#f38ba8> <#585b70>• <#a6adc8>ᴄʟɪᴄᴋ ᴘʜảɪ"
 
 settings-gui:
-  title: "<#1e1e2e><bold>⚙ ᴄᴀɪ ᴅᴀᴛ ᴄᴀʀᴛʙʀ</bold>"
-  lang-button-name: "<gradient:#89dceb:#cba6f7><bold>🌐 ᴄʜᴏɴ ɴɢᴏɴ ɴɢᴜ</bold></gradient>"
+  title: "<#1e1e2e><bold>ᴄᴀʀᴛʙʀ</bold> <#585b70>┃ <#cba6f7>ᴄàɪ đặᴛ"
+  lang-button-name: "<white><sprite:items:item/knowledge_book></white> <gradient:#89dceb:#cba6f7><bold>ɴɢôɴ ɴɢữ</bold></gradient>"
   lang-button-lore:
-    - "<#6c7086>────────────────────────"
-    - "<#cdd6f4>ᴄʜᴏɴ ɴɢᴏɴ ɴɢᴜ ʜɪᴇɴ ᴛʜɪ:"
+    - "<#45475a>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯"
+    - "<#a6adc8>ᴄʜọɴ ɴɢôɴ ɴɢữ ʜɪểɴ ᴛʜị:"
     - ""
-    - " <#6c7086>▪ ᴇɴɢʟɪsʜ"
-    - " <#a6e3a1>▸ ᴛɪᴇɴɢ ᴠɪᴇᴛ <#a6adc8>(ᴅᴀɴɢ ᴄʜᴏɴ)"
+    - " <#585b70>○ ᴇɴɢʟɪsʜ"
+    - " <#a6e3a1>● <bold>ᴛɪếɴɢ ᴠɪệᴛ</bold> <#6c7086>(đᴀɴɢ ᴄʜọɴ)"
     - ""
-    - "<#f9e2af>▶ ᴄʟɪᴄᴋ ᴅᴇ ᴄʜᴜʏᴇɴ ᴅᴏɪ!"
-    - "<#6c7086>────────────────────────"
-  language-changed: "<#a6e3a1>✔ <#cdd6f4>ᴅᴀ ᴄʜᴜʏᴇɴ ɴɢᴏɴ ɴɢᴜ sᴀɴɢ <#f9e2af><bold>ᴛɪếɴɢ ᴠɪệᴛ</bold><#cdd6f4>!"
+    - "<#f9e2af>▸ ᴄʟɪᴄᴋ để ᴄʜᴜʏểɴ đổɪ"
+    - "<#45475a>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯"
+  language-changed: "<#a6e3a1>✔ <#cdd6f4>đã đổɪ ɴɢôɴ ɴɢữ sᴀɴɢ <#f9e2af><bold>ᴛɪếɴɢ ᴠɪệᴛ</bold><#cdd6f4>."
 
 queue:
-  joined: "<#a6e3a1>✔ <#cdd6f4>ʙᴀɴ ᴅᴀ ᴠᴀᴏ ᴘʜᴏɴɢ ᴄʜᴏ! <#a6adc8>[<#89dceb><current><#a6adc8>/<#89dceb><max><#a6adc8>]"
-  left: "<#f38ba8>✘ <#cdd6f4>ʙᴀɴ ᴅᴀ ʀᴏɪ ᴋʜᴏɪ ᴘʜᴏɴɢ ᴄʜᴏ."
-  waiting-actionbar: "<#cba6f7>✦ <#cdd6f4>ᴅᴀɴɢ ᴅᴏɪ ᴛʜᴇᴍ ɴɢᴜᴏɪ ᴄʜᴏɪ... <#a6adc8>(<#f9e2af><current><#a6adc8>/<#f9e2af>3+<#a6adc8>)"
-  countdown-chat: "<#fab387>⏳ <#cdd6f4>ᴛʀᴀɴ ᴅᴀᴜ sᴇ ʙᴀᴛ ᴅᴀᴜ sᴀᴜ <#f38ba8><bold><seconds>s</bold></#f38ba8><#cdd6f4>!"
-  countdown-cancelled: "<#f38ba8>⚠ ᴋʜᴏɴɢ ᴅᴜ ɴɢᴜᴏɪ ᴄʜᴏɪ! ᴅᴀ ʜᴜʏ ᴅᴇᴍ ɴɢᴜᴏᴄ."
+  joined: "<#a6e3a1><bold>+</bold> <#cdd6f4>đã ᴠàᴏ ᴘʜòɴɢ ᴄʜờ <#585b70>┃ <white><sprite:items:item/totem_of_undying></white> <#89dceb><current><#585b70>/<#89dceb><max>"
+  left: "<#f38ba8><bold>-</bold> <#cdd6f4>đã ʀờɪ ᴘʜòɴɢ ᴄʜờ."
+  waiting-actionbar: "<white><sprite:items:item/clock_00></white> <#cdd6f4>đᴀɴɢ đợɪ ɴɢườɪ ᴄʜơɪ <#585b70>┃ <#f9e2af><bold><current></bold><#585b70>/<#a6adc8>3+"
+  countdown-chat: "<white><sprite:items:item/clock_00></white> <#cdd6f4>ʙắᴛ đầᴜ sᴀᴜ <#f9e2af><bold><seconds>s</bold></#f9e2af>"
+  countdown-cancelled: "<white><sprite:items:item/barrier></white> <#f38ba8>ᴛʜɪếᴜ ɴɢườɪ ᴄʜơɪ, đã ʜủʏ đếᴍ ɴɢượᴄ."
   countdown-title:
-    title: "<gradient:#fab387:#f38ba8><bold><seconds></bold></gradient>"
-    subtitle: "<#a6adc8>ᴄʜᴜᴀɴ ʙɪ ɴʜᴀʏ ᴅᴜ..."
+    title: "<gradient:#f9e2af:#f38ba8><bold><seconds></bold></gradient>"
+    subtitle: "<white><sprite:items:item/tnt_minecart></white> <#cdd6f4>ᴄʜᴜẩɴ ʙị ɴʜảʏ ᴅù"
 
 drop-phase:
   dragon-start-chat: |
-    <strikethrough><#585b70>                                                  </strikethrough>
-      <gradient:#cba6f7:#f5c2e7><bold>🐉 ᴄʜᴜʏếɴ ʙᴀʏ ᴛử ᴛʜầɴ đã ᴋʜởɪ ʜàɴʜ!</bold></gradient>
-      <#a6adc8>• <#cdd6f4>ɴʜᴀɴ <#f9e2af><bold>[sʜɪꜰᴛ]</bold></#f9e2af> <#cdd6f4>ᴅᴇ ʙᴜɴɢ ᴅᴜ ɴʜᴀʏ xᴜᴏɴɢ.
-      <#a6adc8>• <#cdd6f4>ᴍᴏ ʀᴜᴏɴɢ ᴛɪᴍ <#f38ba8>ᴛɴᴛ ᴄᴀʀᴛ<#cdd6f4>, <#89dceb>ɢɪᴀᴘ ᴄʜᴏɴɢ ɴᴏ<#cdd6f4> & <#f9e2af>ᴛᴏᴛᴇᴍ<#cdd6f4>!
-    <strikethrough><#585b70>                                                  </strikethrough>
-  on-dragon-actionbar: "<#f5c2e7>🐉 <#cdd6f4>ɴʜᴀɴ <#f9e2af><bold>sʜɪꜰᴛ</bold></#f9e2af> <#cdd6f4>ᴅᴇ ɴʜᴀʏ <#6c7086>│ <#89dceb>ᴅᴏ ᴄᴀᴏ: <#cdd6f4><y>m"
-  parachuting-actionbar: "<#a6e3a1>🪂 <#cdd6f4>ᴅᴀɴɢ ʟᴜᴏɴ ᴅᴜ... <#6c7086>│ <#a6adc8>ᴅɪᴇᴜ ʜᴜᴏɴɢ ʙᴀɴɢ ᴄᴀᴍᴇʀᴀ"
-  landed-chat: "<#a6e3a1>✔ <#cdd6f4>ᴛɪᴇᴘ ᴅᴀᴛ ᴀɴ ᴛᴏᴀɴ! ᴅᴀ ᴛʜᴜ ʜᴏɪ ᴅᴜ & ᴍɪᴇɴ sᴀᴛ ᴛʜᴜᴏɴɢ ʀᴏɪ <#fab387>3s<#cdd6f4>."
+    <#45475a>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+     <white><sprite:items:item/elytra></white> <gradient:#cba6f7:#f5c2e7><bold>ᴄʜᴜʏếɴ ʙᴀʏ đã ᴋʜởɪ ʜàɴʜ</bold></gradient>
+     <#585b70>▸ <#cdd6f4>ɴʜấɴ <#f9e2af><bold>sʜɪꜰᴛ</bold></#f9e2af> <#cdd6f4>để ʙᴜɴɢ ᴅù ɴʜảʏ xᴜốɴɢ.
+     <#585b70>▸ <#cdd6f4>ᴍở ʀươɴɢ ᴛìᴍ <white><sprite:items:item/tnt_minecart></white> <#f38ba8>ᴛɴᴛ ᴄᴀʀᴛ<#cdd6f4>, <white><sprite:items:item/diamond_chestplate></white> <#89dceb>ɢɪáᴘ ᴄʜốɴɢ ɴổ <#cdd6f4>& <white><sprite:items:item/totem_of_undying></white> <#f9e2af>ᴛᴏᴛᴇᴍ<#cdd6f4>.
+    <#45475a>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+  on-dragon-actionbar: "<white><sprite:items:item/elytra></white> <#cdd6f4>ɴʜấɴ <#f9e2af><bold>sʜɪꜰᴛ</bold></#f9e2af> <#cdd6f4>để ɴʜảʏ <#585b70>┃ <#89dceb><y>m"
+  parachuting-actionbar: "<white><sprite:items:item/feather></white> <#a6e3a1>đᴀɴɢ ʟượɴ ᴅù <#585b70>┃ <#a6adc8>xoᴀʏ ᴄᴀᴍᴇʀᴀ để ʟáɪ"
+  landed-chat: "<white><sprite:items:item/feather></white> <#a6e3a1>ᴛɪếᴘ đấᴛ ᴀɴ ᴛᴏàɴ! <#a6adc8>(ᴍɪễɴ sᴛ ʀơɪ 3s)"
 
 chest-holograms:
   tier-1: |
-    <#a6e3a1><bold>📦 ʀươɴɢ ᴛɪᴇʀ ɪ</bold>
-    <#a6adc8>▶ ᴄʟɪᴄᴋ để ᴍở
+    <white><sprite:blocks:block/barrel_side></white> <#a6e3a1><bold>ᴛɪᴇʀ ɪ</bold>
+    <#a6adc8>ᴄơ ʙảɴ
   tier-2: |
-    <#89dceb><bold>💎 ʀươɴɢ ᴛɪᴇʀ ɪɪ</bold>
-    <#a6adc8>▶ ᴄʟɪᴄᴋ để ᴍở
+    <white><sprite:items:item/diamond></white> <#89dceb><bold>ᴛɪᴇʀ ɪɪ</bold>
+    <#89dceb>ʜɪếᴍ
   tier-3: |
-    <gradient:#f9e2af:#fab387><bold>👑 ʀươɴɢ ᴛɪᴇʀ ɪɪɪ</bold></gradient>
-    <#f5c2e7>✦ ᴛʀᴀɴɢ ʙị ᴄựᴄ ᴘʜẩᴍ ✦
+    <white><sprite:items:item/nether_star></white> <gradient:#f9e2af:#fab387><bold>ᴛɪᴇʀ ɪɪɪ</bold></gradient>
+    <#f5c2e7>✦ ᴄựᴄ ᴘʜẩᴍ ✦
   looted: |
-    <#6c7086><strikethrough>   </strikethrough> ✘ đã ʟụᴍ ✘ <strikethrough>   </strikethrough>
+    <white><sprite:blocks:block/cobweb></white> <#6c7086><strikethrough>  </strikethrough> đã ᴍở <strikethrough>  </strikethrough>
 
 loot:
-  tier-1-actionbar: "<#a6e3a1>📦 <#cdd6f4>ᴅᴀ ᴍᴏ <#a6e3a1><bold>ʀᴜᴏɴɢ ᴛɪᴇʀ ɪ</bold></#a6e3a1> <#a6adc8>(ᴄᴏ ʙᴀɴ)"
-  tier-2-actionbar: "<#89dceb>💎 <#cdd6f4>ᴅᴀ ᴍᴏ <#89dceb><bold>ʀᴜᴏɴɢ ᴛɪᴇʀ ɪɪ</bold></#89dceb> <#a6adc8>(ʜɪᴇᴍ)"
-  tier-3-actionbar: "<gradient:#f9e2af:#fab387>👑 ᴅᴀ ᴍᴏ ʀᴜᴏɴɢ ᴛɪᴇʀ ɪɪɪ (ᴄựᴄ ᴘʜẩᴍ)</gradient>"
+  tier-1-actionbar: "<white><sprite:blocks:block/barrel_side></white> <#a6e3a1><bold>ᴛɪᴇʀ ɪ</bold> <#585b70>┃ <#cdd6f4>ʀươɴɢ ᴄơ ʙảɴ"
+  tier-2-actionbar: "<white><sprite:items:item/diamond></white> <#89dceb><bold>ᴛɪᴇʀ ɪɪ</bold> <#585b70>┃ <#cdd6f4>ʀươɴɢ ʜɪếᴍ"
+  tier-3-actionbar: "<white><sprite:items:item/nether_star></white> <gradient:#f9e2af:#fab387><bold>ᴛɪᴇʀ ɪɪɪ</bold></gradient> <#585b70>┃ <#f5c2e7>ʀươɴɢ ᴄựᴄ ᴘʜẩᴍ"
 
 phases:
   names:
-    DROP: "<#f5c2e7>🐉 ɴʜᴀʏ ᴅᴜ"
-    PHASE_1: "<#a6e3a1>🛡 ɴʜᴀᴛ ᴅᴏ & ᴄʜᴜᴀɴ ʙɪ"
-    PHASE_2: "<#fab387>🔥 ᴛʜᴜ ʜᴇᴘ ʙᴏ ɪ"
-    PHASE_3: "<#f38ba8>⚡ ᴛʜᴜ ʜᴇᴘ ʙᴏ ɪɪ"
-    DEATHMATCH: "<gradient:#f38ba8:#cba6f7><bold>💀 ᴅᴀᴜ ᴛʀᴜᴏɴɢ sɪɴʜ ᴛᴜ</bold></gradient>"
-  bossbar-format: "<phase_name> <#6c7086>│ <#cdd6f4>ᴋᴇ ᴛɪᴇᴘ: <#f9e2af><bold><time></bold> <#6c7086>│ <#a6e3a1>sᴏɴɢ sᴏᴛ: <#cdd6f4><alive>"
-  phase-change-chat: "<#cba6f7>✦ <#cdd6f4>ᴄʜᴜʏᴇɴ ɢɪᴀɪ ᴅᴏᴀɴ: <phase_name> <#a6adc8>(<#f9e2af><duration>s<#a6adc8>)"
+    DROP: "<white><sprite:items:item/elytra></white> <#f5c2e7><bold>ɴʜảʏ ᴅù</bold>"
+    PHASE_1: "<white><sprite:items:item/iron_chestplate></white> <#a6e3a1><bold>ɴʜặᴛ đồ</bold>"
+    PHASE_2: "<white><sprite:items:item/fire_charge></white> <#fab387><bold>ᴛʜᴜ ʙᴏ ɪ</bold>"
+    PHASE_3: "<white><sprite:items:item/wind_charge></white> <#f38ba8><bold>ᴛʜᴜ ʙᴏ ɪɪ</bold>"
+    DEATHMATCH: "<white><sprite:items:item/tnt_minecart></white> <gradient:#f38ba8:#cba6f7><bold>sɪɴʜ ᴛử</bold></gradient>"
+  bossbar-format: "<phase_name> <#585b70>┃ <white><sprite:items:item/clock_00></white> <#f9e2af><bold><time></bold> <#585b70>┃ <white><sprite:items:item/totem_of_undying></white> <#a6e3a1><alive> <#cdd6f4>sốɴɢ"
+  phase-change-chat: "<#cba6f7>✦ <#cdd6f4>ɢɪᴀɪ đᴏạɴ: <phase_name> <#585b70>┃ <#f9e2af><duration>s"
   phase-change-title:
     title: "<phase_name>"
-    subtitle: "<#cdd6f4>sɪɴʜ ᴛᴏɴ ᴠᴀ ᴛɪᴇᴜ ᴅɪᴇᴛ ᴅᴏɪ ᴛʜᴜ!"
+    subtitle: "<#a6adc8>sɪɴʜ ᴛồɴ & ʜạ ɢụᴄ đốɪ ᴛʜủ"
 
 combat:
-  kill-cart: "<#f38ba8>💥 <#f9e2af><killer> <#cdd6f4>ᴅᴀ ᴛʜᴏɪ ʙᴀʏ <#f38ba8><victim> <#cdd6f4>ʙᴀɴɢ <#f38ba8><bold>ᴛɴᴛ ᴍɪɴᴇᴄᴀʀᴛ</bold></#f38ba8><#cdd6f4>! <#a6adc8>[<#fab387>ᴄᴏɴ <alive><#a6adc8>]"
-  kill-melee: "<#f38ba8>⚔ <#f9e2af><killer> <#cdd6f4>ᴅᴀ ʜᴀ ɢᴜᴄ <#f38ba8><victim><#cdd6f4>! <#a6adc8>[<#fab387>ᴄᴏɴ <alive><#a6adc8>]"
-  kill-refill-reward: "<#a6e3a1>⚡ <bold>ᴛɪᴇᴘ ᴛᴇ ʜᴀ ɢᴜᴄ!</bold> <#cdd6f4>+5 ᴛɴᴛ ᴄᴀʀᴛs <#6c7086>│ <#cdd6f4>+16 ʀᴀɪʟs <#6c7086>│ <#f9e2af>+2 ɢᴏʟᴅᴇɴ ᴀᴘᴘʟᴇs"
-  cart-cooldown: "<#f38ba8>⚠ <#cdd6f4>ᴅᴀᴛ xᴇ ǫᴜᴀ ɴʜᴀɴʜ! ᴠᴜɪ ʟᴏɴɢ ᴄʜᴏ <#fab387><time>s<#cdd6f4>."
+  kill-cart: "<white><sprite:items:item/tnt_minecart></white> <#f9e2af><killer> <#585b70>⟶ <#f38ba8><victim> <#585b70>┃ <white><sprite:items:item/totem_of_undying></white> <#fab387><alive>"
+  kill-melee: "<white><sprite:items:item/netherite_sword></white> <#f9e2af><killer> <#585b70>⟶ <#f38ba8><victim> <#585b70>┃ <white><sprite:items:item/totem_of_undying></white> <#fab387><alive>"
+  kill-refill-reward: "<white><sprite:items:item/nether_star></white> <#a6e3a1><bold>ᴛɪếᴘ ᴛế</bold> <#585b70>› <white><sprite:items:item/tnt_minecart></white> <#cdd6f4>+5 <#585b70>• <white><sprite:blocks:block/rail></white> <#cdd6f4>+16 <#585b70>• <white><sprite:items:item/golden_apple></white> <#f9e2af>+2"
+  cart-cooldown: "<white><sprite:items:item/tnt_minecart></white> <#f38ba8>ʜồɪ ᴄʜɪêᴜ <#585b70>┃ <#fab387><time>s"
 
 deathmatch:
-  teleport-warning: "<#f38ba8>⏳ <#cdd6f4>ᴅɪᴄʜ ᴄʜᴜʏᴇɴ ᴛᴏɪ <#f9e2af><bold>ᴅᴀᴜ ᴛʀᴜᴏɴɢ sɪɴʜ ᴛᴜ</bold> <#cdd6f4>sᴀᴜ <#f38ba8><seconds>s<#cdd6f4>!"
+  teleport-warning: "<white><sprite:items:item/ender_pearl></white> <#cdd6f4>ᴅịᴄʜ ᴄʜᴜʏểɴ sàɴ đấᴜ sɪɴʜ ᴛử sᴀᴜ <#f38ba8><bold><seconds>s</bold></#f38ba8>"
   arena-intro-chat: |
-    <strikethrough><#585b70>                                                  </strikethrough>
-      <gradient:#f38ba8:#cba6f7><bold>💀 đấᴜ ᴛʀườɴɢ sɪɴʜ ᴛử (ᴅᴇᴀᴛʜᴍᴀᴛᴄʜ) 💀</bold></gradient>
-      <#a6adc8>• <#cdd6f4>ɴʜᴜɴɢ ɴɢᴜᴏɪ sᴏɴɢ sᴏᴛ ᴄᴜᴏɪ ᴄᴜɴɢ ᴅᴀ ᴅᴜᴏᴄ ᴛᴀᴘ ʜᴏᴘ!
-      <#a6adc8>• <#a6e3a1>+8 ᴛɴᴛ ᴄᴀʀᴛs <#cdd6f4>& <#a6e3a1>+32 ʀᴀɪʟs <#cdd6f4>ᴅᴀ ᴅᴜᴏᴄ ᴛɪᴇᴘ ᴛᴇ.
-    <strikethrough><#585b70>                                                  </strikethrough>
+    <#45475a>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+     <white><sprite:items:item/tnt_minecart></white> <gradient:#f38ba8:#cba6f7><bold>đấᴜ ᴛʀườɴɢ sɪɴʜ ᴛử</bold></gradient>
+     <#585b70>▸ <#cdd6f4>ᴛấᴛ ᴄả ɴɢườɪ sốɴɢ sóᴛ đã đượᴄ ᴛậᴘ ʜợᴘ.
+     <#585b70>▸ <#cdd6f4>ᴛɪếᴘ ᴛế: <white><sprite:items:item/tnt_minecart></white> <#a6e3a1>+8 <#585b70>• <white><sprite:blocks:block/rail></white> <#a6e3a1>+32 <#585b70>• <white><sprite:items:item/golden_apple></white> <#f9e2af>+2
+    <#45475a>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
   freeze-countdown-title:
-    title: "<gradient:#f38ba8:#fab387><bold>⚔ <seconds> ⚔</bold></gradient>"
-    subtitle: "<#cdd6f4>ᴄʜᴜᴀɴ ʙɪ ᴄʜᴏ ᴛʀᴀɴ ǫᴜʏᴇᴛ ᴛᴜ ᴄᴜᴏɪ ᴄᴜɴɢ!"
+    title: "<gradient:#f38ba8:#fab387><bold><seconds></bold></gradient>"
+    subtitle: "<white><sprite:items:item/tnt_minecart></white> <#cdd6f4>ᴄʜᴜẩɴ ʙị ǫᴜʏếᴛ đấᴜ"
   fight-start-title:
-    title: "<gradient:#a6e3a1:#89dceb><bold>💥 ᴄʜɪếɴ! 💥</bold></gradient>"
-    subtitle: "<#f38ba8>ᴄʜɪ ᴍᴏᴛ ɴɢᴜᴏɪ ᴅᴜᴏᴄ sᴏɴɢ sᴏᴛ!"
+    title: "<gradient:#a6e3a1:#89dceb><bold>ᴄʜɪếɴ!</bold></gradient>"
+    subtitle: "<white><sprite:items:item/netherite_sword></white> <#f38ba8>ᴄʜỉ ᴍộᴛ ɴɢườɪ sốɴɢ sóᴛ"
 
 ending:
   victory-title:
-    title: "<gradient:#f9e2af:#fab387><bold>👑 ᴠɪᴄᴛᴏʀʏ ʀᴏʏᴀʟᴇ 👑</bold></gradient>"
-    subtitle: "<#cba6f7>ɴʜᴀ ᴠᴏ ᴅɪᴄʜ: <#cdd6f4><winner>"
+    title: "<white><sprite:items:item/totem_of_undying></white> <gradient:#f9e2af:#fab387><bold>ᴠɪᴄᴛᴏʀʏ ʀᴏʏᴀʟᴇ</bold></gradient>"
+    subtitle: "<#cba6f7>ɴʜà ᴠô địᴄʜ <#585b70>› <#cdd6f4><winner>"
   victory-broadcast: |
-    <strikethrough><#585b70>                                                  </strikethrough>
-      <gradient:#f9e2af:#fab387><bold>🏆 ᴋếᴛ ᴛʜúᴄ ᴛʀậɴ đấᴜ - ᴄᴀʀᴛ ʙᴀᴛᴛʟᴇ ʀᴏʏᴀʟᴇ</bold></gradient>
-      
-      <#cba6f7>👑 ɴɢᴜᴏɪ ᴄʜɪᴇɴ ᴛʜᴀɴɢ: <#f9e2af><bold><winner></bold>
-      <#f38ba8>💥 sᴏ ᴍᴀɴɢ ʜᴀ ɢᴜᴄ: <#cdd6f4><kills> ᴋɪʟʟs
-      
-      <#a6adc8>🔄 ᴅᴀɴɢ ᴋʜᴏɪ ᴘʜᴜᴄ ᴍᴀᴘ ᴛʀᴇɴ ʀᴀᴍ (5s)...
-    <strikethrough><#585b70>                                                  </strikethrough>
+    <#45475a>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+     <white><sprite:items:item/totem_of_undying></white> <gradient:#f9e2af:#fab387><bold>ᴠɪᴄᴛᴏʀʏ ʀᴏʏᴀʟᴇ</bold></gradient>
+     
+     <#585b70>▸ <#cba6f7>ɴʜà ᴠô địᴄʜ: <#f9e2af><bold><winner></bold>
+     <#585b70>▸ <white><sprite:items:item/tnt_minecart></white> <#f38ba8>ʜạ ɢụᴄ: <#cdd6f4><kills>
+     
+     <#6c7086>đᴀɴɢ ʟàᴍ ᴍớɪ ʙảɴ đồ ᴛʀêɴ ʀᴀᴍ (5s)...
+    <#45475a>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
