@@ -1,5 +1,7 @@
 package me.nhan.cartbr.drop;
 
+import com.nexomc.nexo.api.NexoItems;
+import com.nexomc.nexo.items.ItemBuilder;
 import com.ticxo.modelengine.api.ModelEngineAPI;
 import com.ticxo.modelengine.api.model.ActiveModel;
 import com.ticxo.modelengine.api.model.ModeledEntity;
@@ -11,6 +13,7 @@ import org.bukkit.World;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
@@ -58,20 +61,44 @@ public class CustomDragonTask extends BukkitRunnable {
             as.setRotation(fixedYaw, 0f);
         });
 
+        String modelId = plugin.getConfigManager().getDragonModelId();
+        boolean attachedModelEngine = false;
+
+        // 1. Thử gắn qua ModelEngine 4 (Hỗ trợ cả Model có xương lẫn Model chỉ có Animated Texture)
         if (Bukkit.getPluginManager().isPluginEnabled("ModelEngine")) {
             try {
-                this.modeledEntity = ModelEngineAPI.createModeledEntity(carrier);
-                this.modeledEntity.setBaseEntityVisible(false);
-                ActiveModel activeModel = ModelEngineAPI.createActiveModel(plugin.getConfigManager().getDragonModelId());
+                ActiveModel activeModel = ModelEngineAPI.createActiveModel(modelId);
                 if (activeModel != null) {
-                    modeledEntity.addModel(activeModel, true);
-                    activeModel.getAnimationHandler().playAnimation(
-                            plugin.getConfigManager().getDragonAnimation(), 0.3, 0.3, 1.0, true
-                    );
+                    this.modeledEntity = ModelEngineAPI.createModeledEntity(carrier);
+                    this.modeledEntity.setBaseEntityVisible(false);
+                    this.modeledEntity.addModel(activeModel, true);
+                    attachedModelEngine = true;
+
+                    String animName = plugin.getConfigManager().getDragonAnimation();
+                    if (animName != null && !animName.isBlank() && !animName.equalsIgnoreCase("none")) {
+                        try {
+                            if (activeModel.getAnimationHandler() != null) {
+                                activeModel.getAnimationHandler().playAnimation(animName, 0.3, 0.3, 1.0, true);
+                            }
+                        } catch (Throwable ignored) {}
+                    }
                 }
             } catch (Throwable t) {
-                plugin.getLogger().warning("ModelEngine dragon model fallback (using invisible carrier): " + t.getMessage());
+                plugin.getLogger().info("ModelEngine model '" + modelId + "' not used, checking Nexo fallback...");
             }
+        }
+
+        // 2. Fallback thông minh: Nếu model được cài bên Nexo (Item 3D có Animated Texture), tự động đội lên Carrier
+        if (!attachedModelEngine && Bukkit.getPluginManager().isPluginEnabled("Nexo")) {
+            try {
+                ItemBuilder nexoBuilder = NexoItems.itemFromId(modelId);
+                if (nexoBuilder != null) {
+                    EntityEquipment equip = carrier.getEquipment();
+                    if (equip != null) {
+                        equip.setHelmet(nexoBuilder.build());
+                    }
+                }
+            } catch (Throwable ignored) {}
         }
 
         for (Player p1Player : initialPassengers) {
